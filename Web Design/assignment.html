@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Examination Question</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<main class="main">
+		<div class="important">Quiz on Important Facts</div>
+		<div class="collection">
+			<div class="javascript">Which one of these is a javascript package manager?</div>
+			<div class="answers">
+				<ul>
+					<li><input type="radio" name="npm" class="node"><span class="nodee">a: Node.js</span></li>
+					<li><input type="radio" name="npm" class="node"><span class="nodee">b: TypeScript</span></li>
+					<li><input type="radio" name="npm" class="node" checked="checked"><span class="nodee">c: npm</span></li>
+				</ul>
+			</div>
+			<div class="direction">
+				<span class="previous">Previous Question</span>
+				<span class="previous next">Next Question</span>
+			</div>
+		<hr>
+		</div>
+	</main>
+</body>
+<style type="text/css">
+	.main {
+		width: 700px;
+	}
+	.important {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		color: white;
+		font-size: 1.3em;
+		background-color: black;
+		padding: 6px 6px 6px 6px;
+	}
+	.collection {
+		background-color: #DEDED7;
+	}
+	.javascript {
+		font-size: 30px;
+		display: flex;
+		justify-content: center;
+		padding-top: 20px;
+	}
+	.answers, .direction{
+		display: flex;
+		justify-content: center;
+	}
+	.previous {
+		font-size: 20px;
+		background-color: #0D39A3;
+		color: white;
+		padding: 15px 15px 15px 15px;
+		border-radius: 4px;
+		cursor: pointer;
+		/*margin-bottom: 30px;*/
+	}
+	.previous:hover{
+		background-color: #6AB7DE;
+
+	}
+	.next {
+		margin-left: 8px;
+	}
+	.direction {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	ul {
+		list-style: none;
+	}
+	.nodee {
+		padding-left: 7px;
+		font-size: 20px;
+	}
+	li {
+		padding: 4px;
+	}
+	hr {
+		background-color: black;
+		color: black;
+		height: 4px;
+	}
+
+</style>
+</html>

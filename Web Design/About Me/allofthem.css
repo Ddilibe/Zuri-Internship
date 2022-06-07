@@ -1,0 +1,126 @@
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: hsla(01, 100%, 0%, 0.2);
+	--Title_font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/*This is the design for the for task bar*/
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	background-color: hsla(0, 100%, 0%, 1.0);
+	padding: 10px 7px;
+}
+.navigation_link {
+	text-decoration: none;
+	font-family: var(--Title_font);
+	color: white;
+}
+
+/*This is the design for the footer*/
+.Footer{
+	display: flex;
+	flex-direction: column;
+}
+.footer_section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*This is the design for all the body*/
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin: 0 auto;
+	height: 500px;
+
+}
+
+/* This is the design for the login page */
+.login_form_details {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column: auto auto;
+	grid-gap: 10px;
+	padding: 5% 0;
+}
+.required:after {
+	content: "*";
+	position: relative;
+	/*top: 6px;*/
+	display: inline-flex;
+	margin-left: 0.2ch;
+	transition: color 1s;
+	color: green;
+}
+.required:required:invalid {
+	color: red;
+}
+.required:required:valid {
+	color: green;
+}
+.login_main {
+	border:1px  black;
+	box-shadow: hsla(2, 100%, 20%, 0.2);
+}
+.login_title {
+	font-family: var(--Title_font);
+	font-size: 40px;
+	text-shadow: 1px 1px 10px hsla(01, 100%, 20%, 1.0);
+}
+.choose_any {
+	display: flex;
+	justify-content: space-between;
+}
+input[type=password], input[type=email] {
+	border: 1px;
+	height: 3vh;
+	width: 15vw;
+	padding: 0vh 1vw;
+	border-radius: 20px;
+}
+input[type=submit], input[type=button] {
+	font-family: var(--Title_font);
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: hidden;
+}
+input[type=submit]{
+	background-color: green;
+}
+input[type=button] {
+	background-color: red;
+}
+@media screen and (max-width: 600px) {
+	.login_title{
+		font-size: 30px;
+	}
+	.Aboutme_sectionA {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+	}
+}
+@media screen and (min-width: 701px){
+
+	.Aboutme_sectionA {
+		display: grid;
+		height: minmax(701px, 1fr);
+		width: calc(1fr / 4);
+		grid-template-rows: 300px;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	[class=Aboutme_sectionA]>img {
+		position: ;
+		height: inherit;
+		width: 100%;
+	}
+}
+.home_image {
+	height: 20px;
+	width: 20px;
+}
