@@ -1,126 +1,244 @@
-body {
-	display: flex;
-	flex-direction: column;
-	background-color: hsla(01, 100%, 0%, 0.2);
-	--Title_font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+* {
+	font-size: 18px;
+	margin: 0px;
+	color: black;
+	font-family: 'New Font', BlinkMacSystemFont, Roboto, Ubuntu,'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
-/*This is the design for the for task bar*/
+body{
+	/*background:  radial-gradient(12rem circle , yellow, orangered);*/
+}
+main {
+	background-color: white;
+	width: 60%;
+	margin: 50px auto;
+	display: flex;
+	box-shadow: 1px 5px 10px hsl(217, 54%, 11%);
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px 10%;
+	border-radius: 30px;
+}
+/* Design for the header and navigation starts here */
+.Header {
+	background-color: hsl(217, 54%, 11%);
+	width: 100%;
+	align-items: center;
+	/*margin: 10px auto;*/
+	padding: 10px 0px;
+	border-bottom: 1px solid black;
+	border-color: white;
+}
 .navigation {
 	display: flex;
-	justify-content: space-between;
-	background-color: hsla(0, 100%, 0%, 1.0);
-	padding: 10px 7px;
+	flex-direction: row;
+	justify-content: space-around;
 }
-.navigation_link {
+.navigation>a{
+	color: floralwhite;
+}
+/* End of the navigation and header design */
+input,button, textarea, select, option {
+	width: 70%;
+	color:  hsl(215, 51%, 70%);
+	height: 50px;
+	padding: 4px 9px;
+	font-family: monospace;
+	/*border: hidden;*/
+	border-right: hidden;
+	border-top: hidden;
+	border-bottom: hidden;
+	border-left: hidden;
+	border-radius: 20px;
+	border: hidden;
+	background-color: hsla(240, 100%, 50%, 0.1);
+	color: black;
+}
+input:focus {
+	border: hidden;
+	border-bottom: hidden;
+	border-right: hidden;
+	border-top: hidden;
+	border-left: hidden;
+	border-bottom-color: red;
+	/*border: thistle;*/
+}
+textarea {
+	height: 100%;
+}
+.required::after {
+	content: "*";
+	position: relative;
+	bottom: 7px;
+	color: green;
+}
+.submit {
+	background-color: green;
+	color: ghostwhite;
+}
+a{
 	text-decoration: none;
-	font-family: var(--Title_font);
-	color: white;
+	color: black;
 }
-
-/*This is the design for the footer*/
-.Footer{
+.dontsubmit {
+	background-color: red;
+	color: ghostwhite;
+}
+label {
+	color: black;
+	font-weight: 700;
+}
+/* Beginning to the design of the About Me page */
+@media screen and (min-width: 739px) {
+	.home_image {
+		width: 40%;
+		position: relative;
+		float: left;
+		margin-right: 4%;
+	}
+	.contact_me {
+		display: flex;
+		justify-content: center;
+		margin: 10px auto;
+		width: 50%;
+	}
+}
+@media screen and (max-width: 738px) {
+	.Aboutme_sectionA {
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 738px) {
+	.contact_me {
+		display: flex;
+		justify-content: center;
+		margin: 10px auto;
+		width: 60%;
+	}
+}
+.contact_me {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	margin: 10px auto;
+	width: 70%;
+}
+.home_image {
+	border-radius: 20px;
+	border: 1px solid black;
+}
+/*Ending of the design for the About Me page*/
+
+/* Beginning of the design for the footer */
+.footer {
+	/*background-color: bisque;*/
+	width: 80%;
+	margin: 0px auto;
 }
 .footer_section {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
+.footer_section>p{
+	margin: 3% 5%;
+}
+/* Ending of the design for the footer */
 
-/*This is the design for all the body*/
-main {
+/* Beginning of the design for the contact me page */
+.contact_details {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 90%;
-	margin: 0 auto;
-	height: 500px;
-
 }
-
-/* This is the design for the login page */
-.login_form_details {
-	display: grid;
-	grid-auto-flow: column;
-	grid-column: auto auto;
-	grid-gap: 10px;
-	padding: 5% 0;
-}
-.required:after {
-	content: "*";
-	position: relative;
-	/*top: 6px;*/
-	display: inline-flex;
-	margin-left: 0.2ch;
-	transition: color 1s;
-	color: green;
-}
-.required:required:invalid {
-	color: red;
-}
-.required:required:valid {
-	color: green;
-}
-.login_main {
-	border:1px  black;
-	box-shadow: hsla(2, 100%, 20%, 0.2);
-}
-.login_title {
-	font-family: var(--Title_font);
-	font-size: 40px;
-	text-shadow: 1px 1px 10px hsla(01, 100%, 20%, 1.0);
-}
-.choose_any {
+.contact_form>div {
 	display: flex;
 	justify-content: space-between;
+	margin: 10px 0px;
 }
-input[type=password], input[type=email] {
-	border: 1px;
-	height: 3vh;
-	width: 15vw;
-	padding: 0vh 1vw;
-	border-radius: 20px;
+.contact_form>.contact_submit>input {
+	margin: 10px auto;
+	width: 40%;
 }
-input[type=submit], input[type=button] {
-	font-family: var(--Title_font);
-	padding: 10px 20px;
-	border-radius: 10px;
-	border: hidden;
+textarea {
+	padding: 10px 10px;
 }
-input[type=submit]{
-	background-color: green;
+.contact_me_heading, .register_header {
+	font-size: 30px;
 }
-input[type=button] {
-	background-color: red;
-}
-@media screen and (max-width: 600px) {
-	.login_title{
-		font-size: 30px;
-	}
-	.Aboutme_sectionA {
+@media screen and (max-width: 768px) {
+	.contact_form>div {
 		display: flex;
 		flex-direction: column;
-		width: 90%;
+		margin: 0px auto;
+	}
+	.contact_form {
+		margin: 0px;
+		padding: 1px;
 	}
 }
-@media screen and (min-width: 701px){
+/* Ending of the design for the contact me page */
 
-	.Aboutme_sectionA {
-		display: grid;
-		height: minmax(701px, 1fr);
-		width: calc(1fr / 4);
-		grid-template-rows: 300px;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	}
-	[class=Aboutme_sectionA]>img {
-		position: ;
-		height: inherit;
+/* Beginning of the design for the register page */
+@media screen and (max-width: 738px){
+	.register_form {
+		margin: 0% auto;
 		width: 100%;
 	}
+	.register_form>div, .login_form>div:not(:last-child) {
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0%;
+	}
+	.register_form>div>label {
+		margin: 10px 0%;
+	}
+	div>label+input, div>label+select, div>label+textarea  {
+		width: 100%;
+	}
+	input[value=Register]{
+		width: 50%;
+		margin: 0% auto;
+	}
+	.register_header {
+		width: 100%;
+		margin: 0;
+	}
 }
-.home_image {
-	height: 20px;
-	width: 20px;
+.register_form>div {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0px;
 }
+input[value=Register] {
+		width: 50%;
+		margin: 0% auto;
+	}
+.register_header, .contact_me_heading{
+	font-size: 7vw;
+	text-align: center;
+}
+/* Ended the design for the Registeration page */
+
+/* Started the design for the login page */
+.login_title {
+	font-size: 3vw;
+	text-align: center;
+}
+.login_form>div:not(:last-child) {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0px;
+}
+.login_form>div:last-child {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+}
+input[name=Signin], .choose_any>a {
+	width: 30%;
+	border-radius: 20px;
+	text-align: center;
+	align-self: center;
+	padding: 10px 0px;
+}
+/* Ended the design for the login page */
