@@ -12,18 +12,16 @@ def find_anagrams(word):
     False
     """
     # [assignment] Add your code here
-    first = word
-    try:
-        second = list(word)
-        third = []
-        for i in range(1, len(word)+1):
-            third.append(str(second[-i]))
-        third=''.join(third)
-        if third == first:
-            return True
-        else:
-            return False
-    except TypeError:
-        print("Not able to  convert into a list")
+    d = word
+    e =  list(d)
+    e.reverse()
+    e = "".join(e)
+    if d == e:
+        return True
+    else:
+        return False
 
 
+
+find_anagrams("Hello")
+find_anagrams("racecar")
